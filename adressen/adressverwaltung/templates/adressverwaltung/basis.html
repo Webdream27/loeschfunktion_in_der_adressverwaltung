@@ -1,0 +1,18 @@
+<!-- das Basis-Template -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	{% load static %} <!-- die statischen Dateien laden-->
+	<link rel="stylesheet" href="{% static "style.css" %}" />
+	<meta charset="utf-8">
+	<title>Adressverwaltung</title>
+</head>
+<h1>
+	Adressverwaltung
+</h1>
+<body>
+    <!-- der Block für den Inhalt -->
+    {% block inhalt %}
+    {% endblock %}
+</body>
+</html>

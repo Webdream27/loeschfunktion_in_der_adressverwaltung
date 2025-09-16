@@ -1,0 +1,8 @@
+<!-- detail.html -->
+{% extends "adressverwaltung/basis.html" %}
+{% block inhalt %}
+    <h2>Details zu {{ adresse.vorname }} {{adresse.nachname }}</h2>
+    <p>{{ adresse.strasse }}</p>
+    <p>{{ adresse.plz }} {{ adresse.ort }}</p>
+    <p>{{ adresse.telefon }}</p>
+{% endblock %}    

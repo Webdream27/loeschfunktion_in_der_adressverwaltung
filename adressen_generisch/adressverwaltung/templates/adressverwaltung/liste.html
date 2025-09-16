@@ -1,0 +1,26 @@
+<!-- liste.html -->
+<!-- das Basis-Template wird erweitert -->
+{% extends "adressverwaltung/basis.html" %}
+<!-- der Block für den Inhalt -->
+{% block inhalt %}
+<table>
+    <thead>
+      	<tr>
+          	<th>ID</th>
+        	<th>Vorname</th>
+        	<th>Nachname</th>
+            <th><a href="{% url 'neu'%}">Neuer Eintrag</a></th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for eintrag in adressen %}
+        <tr>
+            <td>{{ eintrag.id }}</td>
+            <td>{{ eintrag.vorname }}</td>
+            <td>{{ eintrag.nachname }}</td>
+            <td><a href="{% url 'detail' eintrag.id %}">Details anzeigen</a> <a href="{% url 'bearbeiten' eintrag.id %}">Bearbeiten</a></td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>    
+{% endblock %}    

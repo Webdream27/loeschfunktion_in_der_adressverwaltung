@@ -1,0 +1,12 @@
+<!-- bearbeiten.html -->
+{% extends "adressverwaltung/basis.html" %}
+{% block inhalt %}
+<form method="post">
+    <h2>{{ueberschrift}}</h2>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p>
+        <input type="submit" value="Speichern">
+    </p>
+</form>
+{% endblock %}    
